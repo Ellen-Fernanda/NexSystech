@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexSystech - O melhor da tecnologia </title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <div class="body">
+    <div class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="img/logo_semfundo.png" alt="logo" width="90px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre nós</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#servico">Nossos serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contato">Contato</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input id="searchInput" class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
+              <button class="btn btn-success" type="submit">Pesquisar</button>
+            </form>
+            <div id="searchResults" class="mt-2"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <br>
+    <div class="container">
+      <header id="home">
+        <div class="titulo">
+        <h1>NexSystech</h1>
+        <h4>Soluções de Tecnologia para Transformar o Seu Negócio</h>
+        </div>
+        <a href="#contato" class="cta-button">Entre em Contato</a>
+      </header>
+      <br><br><br><br> 
+      <div class="carrossel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/1.png" class="d-block w-100" alt="logo">
+            </div>
+            <div class="carousel-item">
+              <img src="img/2.png" class="d-block w-100" alt="missão">
+            </div>
+            <div class="carousel-item">
+              <img src="img/3.png" class="d-block w-100" alt="visão">
+            </div>
+            <div class="carousel-item">
+              <img src="img/4.png" class="d-block w-100" alt="valores">
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="sobre">
+        <div class="titulo">
+        <h2>Sobre Nós</h2>
+        </div>
+        <p>Na NexSystech, somos uma equipe apaixonada por tecnologia e comprometida em transformar ideias inovadoras em
+          soluções de ponta.</p>
+        <p>Nossa empresa nasceu com a missão de impulsionar negócios por meio do desenvolvimento de sistemas sob
+          medida,<br> oferecendo a nossos clientes um diferencial competitivo no mercado digital.</p>
+        <p>Seja qual for a sua necessidade em desenvolvimento de sistemas, estamos aqui para transformar suas ideias em
+          realidade.</p>
+      </section>
+      <br><br><br><br>
+      <section id="servico">
+        <div class="servicos">
+        <div class="titulo">
+        <h2>Nossos Serviços</h2>
+      </div>
+        <ul>
+          <li>Desenvolvimento de Websites personalizados</li>
+          <li>Aplicações Web e Mobile</li>
+          <li>Hospedagem e gerenciamento de domínio</li>
+          <li>Consultoria em TI</li>
+          <li>Integração de Sistemas</li>
+        </ul>
+      </div>
+      </section>
+      <br><br><br><br>
+      <section id="contato">
+        <div class="titulo">
+        <h2>Entre em Contato</h2>
+        </div>
+        <p>Preencha o formulário abaixo e entraremos em contato com você em breve:</p>
+        <div class="formulario">
+        <form action="seu-script-de-contato.php" method="POST">
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" placeholder="Seu nome">
+
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="seuemail@gmail.com">
+          <br>
+          <textarea class="textarea" placeholder="Digite aqui sua mensagem..."></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+      </section>
+      <br><br><br><br>
+      <footer>
+        <div class="direitos">
+          <p>Todos os direitos reservados &copy; 2023 NexSystech</p>
+        </div><br>
+      </footer>
+    </div>
+    <!-- <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const searchForm = document.querySelector('form[role="search"]');
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+    
+        // Adicionar o ouvinte de evento para o evento de envio do formulário
+        searchForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          const searchTerm = searchInput.value;
+          performSearch(searchTerm);
+        });
+    
+        // Função simulada de busca (substitua por chamadas a API reais)
+        function performSearch(searchTerm) {
+          // Simulação simples com alguns resultados estáticos
+          const fakeSearchResults = [
+            'Resultado 1 para lorem ipsum dolor sit amet',
+            'Resultado 2 para lorem ipsum dolor',
+            'Resultado 3 para sit amet',
+            'Resultado 4 para lorem ipsum',
+            'Resultado 5 para amet',
+          ];
+    
+          displaySearchResults(fakeSearchResults, searchTerm);
+        }
+    
+        // Exibir os resultados da pesquisa com destaque
+        function displaySearchResults(results, searchTerm) {
+          searchResults.innerHTML = '';
+    
+          if (results.length > 0) {
+            for (const result of results) {
+              const resultItem = document.createElement('div');
+              resultItem.classList.add('alert', 'alert-info');
+              resultItem.innerHTML = highlightSearchTerm(result, searchTerm);
+              searchResults.appendChild(resultItem);
+            }
+          } else {
+            const noResultsItem = document.createElement('div');
+            noResultsItem.classList.add('alert', 'alert-warning');
+            noResultsItem.textContent = 'Nenhum resultado encontrado.';
+            searchResults.appendChild(noResultsItem);
+          }
+        }
+    
+        // Destacar a palavra pesquisada nos resultados
+        function highlightSearchTerm(result, searchTerm) {
+          const regex = new RegExp(searchTerm, 'gi');
+          return result.replace(regex, match => `<mark>${match}</mark>`);
+        }
+      });
+    </script> -->
+</body>
+<script src="/js/bootstrap.bundle.min.js"></script>
+
+</html>
